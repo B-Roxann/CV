@@ -1,0 +1,17 @@
+.liens_icons8{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5em;
+    color: white;
+
+    padding-left: 30px;
+    padding-top: 30px;
+}
+.lien_icon{
+    display: flex;
+    align-items: center;
+
+    height: 50px;
+}
+
