@@ -19,7 +19,7 @@ main{
     opacity: 0.6;
     
     width: 60%;
-    padding: 80px 30px 0px 30px;
+    padding: 80px;
     
     overflow: auto;
     scrollbar-width: none;
@@ -29,7 +29,8 @@ main{
 /***********Section***********/
 .experience_professionelle{
     display: grid;
-    grid-template: repeat(5, 1fr) / repeat(18, 1fr);    
+    grid-template: repeat(5, 1fr) / repeat(18, 1fr);
+    width: 100%;
 }
 /*********Séparateur*********/
 .separateur{
