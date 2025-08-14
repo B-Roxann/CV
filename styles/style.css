@@ -11,6 +11,7 @@
 body{
     --color-1 : #00ffff;
     --color-2 : #ccffff;
+    --color-3 : #80d94c;
 }
 
 /************************Elements principaux************************/
@@ -46,9 +47,10 @@ body{
     top: -32px;
     z-index: 1;
     transition: transform 600ms ease-in-out;
-    transform: translateY(0%);
+    transform: translateY(-6%);
 
-    border: 1px solid black;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
     height: 80px;
     width: 190px;
 }
@@ -115,26 +117,4 @@ a:hover{
 .liste_nav{
     display: none;
     position: absolute;
-}
-
-
-/*******Main*******/
-.presentation_box *{
-    color: white;
-}
-
-.bouton{    
-    border: 1px white solid;
-    text-align: center; 
-    border-radius: 5px;
-    height: 35px;
-}
-
-.bouton:hover{
-    background: linear-gradient(160deg,var(--color-1) ,var(--color-2));
-    border: 1px rgb(0, 0, 0) solid;
-    box-shadow: 3px 3px rgba(0, 0, 0, 0.60);
-    
-    color: black;
-    font-weight: bold;
 }

@@ -1,34 +1,67 @@
-.presentation_box{
-
-    display: flex;
-    padding-left: 30px;
-
-    position: fixed;
-    top: 25vh;
-
+/***********Suivi de navigation***********/
+#home{
+    box-shadow: 0px 5px var(--color-3);
 }
 
+
+/***********Elements généraux du main***********/
+/***********Portrait image***********/
+.portrait_box{
+    height: 350px;
+}
+
+/***********Présentation***********/
+.presentation_box{
+    display: flex;
+    padding-left: 30px;
+    
+    position: fixed;
+    top: 25vh;
+    
+}
+
+.presentation_box *{
+    color: white;
+}
+
+
+/***************Par Zone***************/
+/***********Portrait***********/
+.portrait{
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.7);
+}
+
+/***********Présentation***********/
 .presentation{
     color: white;
     font-size: 1.5em;
-
+    
     width: 250px;
     padding: 30px;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.portrait_box{
-    height: 350px;
-}
-
-.portrait{
-    height: 100%;
-    border-radius: 8px;
-}
-
 h1{
     font-size: xxx-large;
+}
+
+.bouton{    
+    border: 1px white solid;
+    text-align: center; 
+    border-radius: 5px;
+    height: 35px;
+}
+
+.bouton:hover{
+    background: linear-gradient(160deg,var(--color-1) ,var(--color-2));
+    border: 1px rgb(0, 0, 0) solid;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.70);
+    
+    color: black;
+    font-weight: bold;
 }

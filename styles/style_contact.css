@@ -1,0 +1,11 @@
+/***********Suivi de navigation***********/
+#contact{
+    box-shadow: 0px 5px var(--color-3);
+}
+
+/***********EN CONSTRUCTION***********/
+main{
+    background-image: url("../Images/under_construction.jpg");
+    background-size: 100%;
+    opacity: 0.7;
+}
