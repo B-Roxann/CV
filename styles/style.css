@@ -17,9 +17,11 @@ body{
 /************************Elements principaux************************/
 
 body{
-    
-    background-image: url("../Images/Fond_accueil.jpg");
+    display: flex;
+
+    background-image: url("../Images/Fond_accueil.jpg"); /*Chaîne de montage de l'Altaï - Russie*/
     background-position: right 50%;
+    
     height: 100vh;
 }
 
