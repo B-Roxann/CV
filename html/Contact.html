@@ -8,6 +8,7 @@
     
     <!--                        Intégration des StylesSheets                        -->
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_pages.css">
     <link rel="stylesheet" href="../styles/style_contact.css">
 
     <!--                        Intégration de la police Roboto                        -->
@@ -43,7 +44,7 @@
         <div class="navigation" id="portfolios">
             <a href="Portfolios.html">Portfolios</a>
         </div>
-        <div class="navigation" id="contact">
+        <div class="navigation changement_page" id="contact">
             <a href="Contact.html">Contact</a>
         </div>
         <div class="navigation" id="telecharger">
@@ -80,10 +81,39 @@
     </nav>
 
     <main>
-        <section class="#">
+        <div class="main_container">
+            <h1>FORMULAIRE DE CONTACT</h1>
 
-        </section>
+            <div class="separateur"></div>
+
+            <section class="contact">
+                <form method="post" action="">
+                    <div class="form_nom formulaire">
+                        <label for="nom"></label>
+                        <input type="text" name="nom" id="nom" placeholder="Nom *" required>
+                    </div>
+                    <div class="form_societe formulaire">
+                        <label for="societe"></label>
+                        <input type="text" name="societe" id="societe" placeholder="Société">
+                    </div>
+                    <div class="form_email formulaire">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Email *" required>
+                    </div>
+                    <div class="form_message">
+                        <label for="message"></label>
+                        <textarea name="message" id="message" placeholder="Votre message"></textarea>
+                    </div>
+                    <button type="button" id="submit_message">Envoyer</button>
+                </form>
+                <p>* Champs obligatoires</p>
+            </section>
+        </div>
     </main>
+
+    <aside class="hidden">
+        <!-- aside -->
+    </aside>
 
     <footer>
         <a href="Credits.html">Crédits</a>
