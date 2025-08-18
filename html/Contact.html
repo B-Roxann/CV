@@ -93,6 +93,7 @@
                     <div class="form_nom formulaire">
                         <label for="nom"></label>
                         <input type="text" name="nom" id="nom" placeholder="Nom *" required autofocus>
+                        <small class="form_error hidden">Veuillez saisir un nom valide.</small>
                     </div>
                     <div class="form_societe formulaire">
                         <label for="societe"></label>
@@ -101,6 +102,7 @@
                     <div class="form_email formulaire">
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="Email *" required>
+                        <small class="form_error hidden">Veuillez saisir un email valide. Ex. jean.dupont@exemple.fr</small>
                     </div>
                     <div class="form_message">
                         <label for="message"></label>
@@ -109,12 +111,20 @@
                     <button type="submit" id="submit_message">Envoyer</button>
                 </form>
                 <p>* Champs obligatoires</p>
+                <p class="hidden form_error">Sans accents et caractères spéciaux autorisés : ".-_"</p>
             </section>
         </div>
     </main>
 
     <aside class="hidden">
-        <!-- aside -->
+        <div class="main_container">
+
+            <div class="separateur"></div>
+
+
+            <div class="separateur"></div>
+
+        </div>
     </aside>
 
     <footer>

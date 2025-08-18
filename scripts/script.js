@@ -33,16 +33,14 @@ btn_telecharger.addEventListener("click", ()=>
 /******************************************************************/
 
 let form = document.getElementById("form_contact");
+let error_tags = document.querySelectorAll(".form_error");
 
 /**Ecouteur d'évènement au submit**/
 /**Effectue les tests RegEx des champs obligatoires**/
 form.addEventListener("submit",(event)=>{
-    try{
         event.preventDefault();
+        retirer_erreur(error_tags)
         liste_input.forEach(element => {
             tester_champ(element);
         });
-    }catch(error){
-        alert("Une erreur est survenue : " + error.message);
-    }
 });

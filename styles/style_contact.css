@@ -86,3 +86,14 @@ form{
     font-weight: bold;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
+
+.form_error{
+    font-size: 0.9em;
+    font-weight: bold;
+    color: red;
+}
+
+/***********Gestion de l'erreur formulaire***********/
+.error{
+    display: block !important;
+}
