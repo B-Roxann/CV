@@ -18,8 +18,10 @@
     
     <!--                        Intégration du script                        -->
     <script src="../scripts/script.js" defer></script>
-    <!--                        Intégration des fonctions                    -->
+    <!--             Intégration des fonctions navigation secondaire         -->
     <script src="../scripts/fct_nav_secondaire.js" defer></script>
+    <!--              Intégration des fonctions du Formulaire                -->
+    <script src="../scripts/fct_formulaire.js" defer></script>
 </head>
 
 <body>
@@ -87,7 +89,7 @@
             <div class="separateur"></div>
 
             <section class="contact">
-                <form method="post" action="">
+                <form id="form_contact" method="post" action="">
                     <div class="form_nom formulaire">
                         <label for="nom"></label>
                         <input type="text" name="nom" id="nom" placeholder="Nom *" required autofocus>
@@ -104,7 +106,7 @@
                         <label for="message"></label>
                         <textarea name="message" id="message" placeholder="Votre message"></textarea>
                     </div>
-                    <button type="button" id="submit_message">Envoyer</button>
+                    <button type="submit" id="submit_message">Envoyer</button>
                 </form>
                 <p>* Champs obligatoires</p>
             </section>

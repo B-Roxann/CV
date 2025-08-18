@@ -99,8 +99,7 @@ aside{
     position: fixed;
     
     
-    background-color: white;
-    opacity: 0.6;
+    background-color: rgb(255, 255, 255, 0.6);
     
     height: 100%;
     padding: 20px;
@@ -130,6 +129,7 @@ aside{
 /********************Classes utiles********************/
 /******************************************************/
 
+/***********Barre aside***********/
 .hidden{
     display: none;
 }
