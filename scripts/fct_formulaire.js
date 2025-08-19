@@ -74,6 +74,10 @@ function regex_simple(champ){
         }
 }
 
+/******************************************************************/
+/********************Gestion de l'envoi du mail********************/
+/******************************************************************/
+
 /**
  * Cette fonction retire le style .error
  * de chaque tag du formulaire.
@@ -108,3 +112,31 @@ function valider_formulaire(list_error_tags){
               publicKey: "XunkqrqxTyclY6bvF",
             });
         })();
+
+/**
+ * Cette fonction envoi l'email
+ * via Emailjs
+ */
+function envoyer_email(){
+    emailjs.sendForm('contact_service_CVrox89', 'template_hq567nu', event.target)
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
+}
+
+/******************************************************************/
+/*******************Gestion du popup mail envoyé*******************/
+/******************************************************************/
+
+const mail_envoye = document.getElementById("btn_retour");
+const fenetre_popup = document.getElementById("popup");
+
+mail_envoye.addEventListener("click", ()=>{
+    fenetre_popup.classList.add("hidden");
+});
+
+function afficher_popup_message_envoye(){
+    fenetre_popup.classList.remove("hidden");
+}

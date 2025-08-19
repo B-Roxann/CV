@@ -52,13 +52,10 @@ form.addEventListener("submit",(event)=>{
             valider_formulaire(error_tags);
             
             //Génération du mail par le service Email.js
-            emailjs.sendForm('contact_service_CVrox89', 'template_hq567nu', event.target)
-            .then(() => {
-                console.log('SUCCESS!');
-            }, (error) => {
-                console.log('FAILED...', error);
-            });
+            envoyer_email();
 
+            //Affichage de la popup qui confirme l'envoi
+            afficher_popup_message_envoye();
         }catch(error){
             console.log("Au moins une erreur est survenue :" + error.message);
         }
