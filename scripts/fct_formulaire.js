@@ -77,10 +77,34 @@ function regex_simple(champ){
 /**
  * Cette fonction retire le style .error
  * de chaque tag du formulaire.
- * @param {querySelectorAll} liste_tag 
+ * @param {NodeList} liste_tag 
  */
 function retirer_erreur(liste_tag){
     liste_tag.forEach(element =>{
         element.classList.remove("error");
     })
 }
+
+/**
+ * Cette fonction
+ * @param {NodeList} list_error_tags 
+ */
+
+function valider_formulaire(list_error_tags){
+    list_error_tags.forEach(element =>{
+        if(element.classList.contains("error")){
+            throw new Error(`Le champ ${element.parentElement.querySelector("input").id} n'est pas valide.`);
+        }
+    });
+}
+
+
+/**
+ * Cette fonction initialise Emailjs
+ */
+(function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "XunkqrqxTyclY6bvF",
+            });
+        })();

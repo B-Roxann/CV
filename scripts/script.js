@@ -39,8 +39,27 @@ let error_tags = document.querySelectorAll(".form_error");
 /**Effectue les tests RegEx des champs obligatoires**/
 form.addEventListener("submit",(event)=>{
         event.preventDefault();
-        retirer_erreur(error_tags)
-        liste_input.forEach(element => {
-            tester_champ(element);
-        });
+        try{
+
+            retirer_erreur(error_tags);
+
+            //Vérification que les champs sont valides
+            liste_input.forEach(element => {
+                tester_champ(element);
+            });
+            
+            //Validation du formulaire
+            valider_formulaire(error_tags);
+            
+            //Génération du mail par le service Email.js
+            emailjs.sendForm('contact_service_CVrox89', 'template_hq567nu', event.target)
+            .then(() => {
+                console.log('SUCCESS!');
+            }, (error) => {
+                console.log('FAILED...', error);
+            });
+
+        }catch(error){
+            console.log("Au moins une erreur est survenue :" + error.message);
+        }
 });

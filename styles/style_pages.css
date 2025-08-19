@@ -131,7 +131,7 @@ aside{
 
 /***********Barre aside***********/
 .hidden{
-    display: none;
+    display: none !important;
 }
 
 /***********Suivi de navigation***********/

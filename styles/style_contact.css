@@ -97,3 +97,8 @@ form{
 .error{
     display: block !important;
 }
+
+/***********Aside***********/
+.coordonnees{
+    text-align: center;
+}

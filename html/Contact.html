@@ -20,6 +20,8 @@
     <script src="../scripts/script.js" defer></script>
     <!--             Intégration des fonctions navigation secondaire         -->
     <script src="../scripts/fct_nav_secondaire.js" defer></script>
+    <!--              Intégration des fonctions de emailjs                -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <!--              Intégration des fonctions du Formulaire                -->
     <script src="../scripts/fct_formulaire.js" defer></script>
 </head>
@@ -90,6 +92,9 @@
 
             <section class="contact">
                 <form id="form_contact" method="post" action="">
+                    <div class="hidden formulaire">
+                        <input type="time" name="time" id="time">
+                    </div>
                     <div class="form_nom formulaire">
                         <label for="nom"></label>
                         <input type="text" name="nom" id="nom" placeholder="Nom *" required autofocus>
@@ -106,7 +111,7 @@
                     </div>
                     <div class="form_message">
                         <label for="message"></label>
-                        <textarea name="message" id="message" placeholder="Votre message"></textarea>
+                        <textarea name="message" id="message" placeholder="Votre message" required></textarea>
                     </div>
                     <button type="submit" id="submit_message">Envoyer</button>
                 </form>
@@ -116,14 +121,25 @@
         </div>
     </main>
 
-    <aside class="hidden">
-        <div class="main_container">
+    <aside>
+        <div class="aside_container">
+
+            <h1>Coordonnées</h1>
 
             <div class="separateur"></div>
 
-
+            <section class="coordonnees">
+                <h2>Adresse</h2>
+                <p>14, Rue Ste Consuelo</p>
+                <p>F-54240 JOEUF</p>
+            </section>
+            
             <div class="separateur"></div>
-
+            
+            <section class="coordonnees">
+                <h2>Téléphone</h2>
+                <p>+33 6 23 43 26 92</p>
+            </section>
         </div>
     </aside>
 
