@@ -33,7 +33,7 @@ btn_telecharger.addEventListener("click", ()=>
 /******************************************************************/
 
 let form = document.getElementById("form_contact");
-let error_tags = document.querySelectorAll(".form_error");
+let error_tags = document.querySelectorAll("small.form_error");
 
 /**Ecouteur d'évènement au submit**/
 /**Effectue les tests RegEx des champs obligatoires**/

@@ -124,17 +124,3 @@ aside{
     height: 20px;
 }
 
-
-/******************************************************/
-/********************Classes utiles********************/
-/******************************************************/
-
-/***********Barre aside***********/
-.hidden{
-    display: none !important;
-}
-
-/***********Suivi de navigation***********/
-.changement_page{
-    box-shadow: 0px 5px var(--color-3);
-}

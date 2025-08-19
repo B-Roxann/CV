@@ -90,18 +90,35 @@ function retirer_erreur(liste_tag){
 }
 
 /**
- * Cette fonction
+ * Cette fonction lance une exception
+ * si elle rencontre une erreur.
  * @param {NodeList} list_error_tags 
  */
 
 function valider_formulaire(list_error_tags){
-    list_error_tags.forEach(element =>{
-        if(element.classList.contains("error")){
-            throw new Error(`Le champ ${element.parentElement.querySelector("input").id} n'est pas valide.`);
-        }
-    });
+    let nbre_erreurs = compter_erreurs(list_error_tags);
+    if( nbre_erreurs > 0){
+        throw new Error(`${nbre_erreurs} erreur(s).`);
+    }
 }
 
+/**
+ * Cette fonction compte le nombre d'erreurs rencontrées
+ *en itérant sur les éléments pouvant la contenir
+ *
+ * @param {NodeList} list_error_tags
+ *
+ * et retourne : {int} compteur_erreurs
+ */
+function compter_erreurs(list_error_tags){
+    let compteur_erreurs = 0;
+    list_error_tags.forEach(element =>{
+        if(element.classList.contains("error")){
+            compteur_erreurs++;
+        };
+    });
+    return compteur_erreurs;
+}
 
 /**
  * Cette fonction initialise Emailjs
