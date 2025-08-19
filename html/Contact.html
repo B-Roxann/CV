@@ -8,6 +8,7 @@
     
     <!--                        Intégration des StylesSheets                        -->
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/style_pages.css">
     <link rel="stylesheet" href="../styles/style_contact.css">
 
     <!--                        Intégration de la police Roboto                        -->
@@ -17,8 +18,12 @@
     
     <!--                        Intégration du script                        -->
     <script src="../scripts/script.js" defer></script>
-    <!--                        Intégration des fonctions                    -->
+    <!--             Intégration des fonctions navigation secondaire         -->
     <script src="../scripts/fct_nav_secondaire.js" defer></script>
+    <!--              Intégration des fonctions de emailjs                -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <!--              Intégration des fonctions du Formulaire                -->
+    <script src="../scripts/fct_formulaire.js" defer></script>
 </head>
 
 <body>
@@ -28,22 +33,22 @@
                 <img class="logo" src="../Images/Logos/BREMOND_logo.svg" alt="Home" title="Logo Home">
             </a>
         </div>
-        <div class="navigation" id="home">
+        <div class="navigation">
             <a href="Index.html">Home</a>
         </div>
         <div class="navigation" id="experiences">
-            <a href="#">Expériences</a>    
+            <a href="#">Expériences</a>
         </div>
-        <div class="navigation" id="formations">
+        <div class="navigation">
             <a href="Formations.html">Formations</a>
         </div>
         <div class="navigation" id="competences">
             <a href="#">Compétences</a>
         </div>
-        <div class="navigation" id="portfolios">
+        <div class="navigation">
             <a href="Portfolios.html">Portfolios</a>
         </div>
-        <div class="navigation" id="contact">
+        <div class="navigation changement_page">
             <a href="Contact.html">Contact</a>
         </div>
         <div class="navigation" id="telecharger">
@@ -80,10 +85,71 @@
     </nav>
 
     <main>
-        <section class="#">
+        <div class="main_container">
+            <h1>FORMULAIRE DE CONTACT</h1>
 
-        </section>
+            <div class="separateur"></div>
+
+            <section class="contact">
+                <form id="form_contact" method="post" action="">
+                    <div class="hidden formulaire">
+                        <input type="time" name="time" id="time">
+                    </div>
+                    <div class="form_nom formulaire">
+                        <label for="nom"></label>
+                        <input type="text" name="nom" id="nom" placeholder="Nom *" required autofocus>
+                        <small class="form_error hidden">Veuillez saisir un nom valide.</small>
+                    </div>
+                    <div class="form_societe formulaire">
+                        <label for="societe"></label>
+                        <input type="text" name="societe" id="societe" placeholder="Société">
+                    </div>
+                    <div class="form_email formulaire">
+                        <label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Email *" required>
+                        <small class="form_error hidden">Veuillez saisir un email valide. Ex. jean.dupont@exemple.fr</small>
+                    </div>
+                    <div class="form_message">
+                        <label for="message"></label>
+                        <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+                    </div>
+                    <button type="submit" id="submit_message">Envoyer</button>
+                </form>
+                <p>* Champs obligatoires</p>
+                <p class="hidden form_error">Sans accents et caractères spéciaux autorisés : ".-_"</p>
+            </section>
+        </div>
     </main>
+
+    <aside>
+        <div class="aside_container">
+
+            <h1>Coordonnées</h1>
+
+            <div class="separateur"></div>
+
+            <section class="coordonnees">
+                <h2>Adresse</h2>
+                <p>14, Rue Ste Consuelo</p>
+                <p>F-54240 JOEUF</p>
+            </section>
+            
+            <div class="separateur"></div>
+            
+            <section class="coordonnees">
+                <h2>Téléphone</h2>
+                <p>+33 6 23 43 26 92</p>
+            </section>
+        </div>
+    </aside>
+
+    <div class="fenetre_popup hidden" id="popup">
+        <div class="popup">
+            <h2>SUCCÈS !</h2>
+            <p>Votre e-mail a bien été envoyé.</p>
+            <button id="btn_retour">Retour</button>
+        </div>
+    </div>
 
     <footer>
         <a href="Credits.html">Crédits</a>

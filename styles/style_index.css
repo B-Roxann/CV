@@ -58,7 +58,7 @@ h1{
 }
 
 .bouton:hover{
-    background: linear-gradient(160deg,var(--color-1) ,var(--color-2));
+    background: linear-gradient(160deg,var(--color-3) ,var(--color-4));
     border: 1px rgb(0, 0, 0) solid;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.70);
     

@@ -12,6 +12,7 @@ body{
     --color-1 : #00ffff;
     --color-2 : #ccffff;
     --color-3 : #80d94c;
+    --color-4 : #33CC33;
 }
 
 /************************Elements principaux************************/
@@ -119,4 +120,18 @@ a:hover{
 .liste_nav{
     display: none;
     position: absolute;
+}
+
+/******************************************************/
+/********************Classes utiles********************/
+/******************************************************/
+
+/***********Barre aside***********/
+.hidden{
+    display: none !important;
+}
+
+/***********Suivi de navigation***********/
+.changement_page{
+    box-shadow: 0px 5px var(--color-3);
 }
