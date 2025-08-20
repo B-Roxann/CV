@@ -1,0 +1,66 @@
+/****************Organisation du Sheet style_portfolio.css****************/
+
+/****************Elements génériques****************/
+.container{
+    text-align: center;
+    width: 100%;
+}
+
+/****************Elements principaux****************/
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid black;
+    width: 100%;
+    
+    padding: 10px 30px;
+    margin-top: 15px;
+}
+.logo_container{
+    display: flex;
+    justify-content: center;
+}
+
+/****************Elements par zone****************/
+
+.projet h3{
+    margin-top: 15px;
+    text-decoration: underline;
+}
+
+.screen_project{
+    width: 100%;
+}
+
+.logo img{
+    box-sizing: border-box;
+    padding: 5px;
+    
+    height: 100%;
+    width: 100%;
+}
+
+.git{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px;
+    
+    margin-top: 15px;
+
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
+
+.git:hover{
+    background: linear-gradient(90deg,var(--color-3), var(--color-4));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+}

@@ -1,17 +1,17 @@
-.liens_icons8{
+.section_icons{
     display: flex;
     flex-direction: column;
-
-    font-size: 1.5em;
-    color: white;
-
-    padding-left: 30px;
-    padding-top: 30px;
+    
+    text-align: center;
+    
+    width: 100%;
 }
 .lien_icon{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    height: 50px;
+    height: auto;
 }
 
