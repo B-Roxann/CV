@@ -25,7 +25,11 @@ main{
 /***********Section***********/
 .experience_professionelle{
     display: grid;
-    grid-template: auto auto auto / repeat(18, 1fr);
+    grid-template-columns: 50px 1fr 1fr;
+    grid-template-areas:
+        "profession profession pays"
+        "societe societe periode"
+        ". description_experience description_experience";
     
     margin: 25px 0px 25px 0px;
     width: 100%;   
@@ -45,7 +49,7 @@ h1{
 
 /*****************Zone Section*****************/
 .profession{
-    grid-column: 1/9;
+    grid-area: profession;
     align-content: center;
     
     font-size: 1.35em;
@@ -53,7 +57,7 @@ h1{
 }
 
 .pays, .pays *{
-    grid-column: 14/19;
+    grid-area: pays;
     align-content: center;
     
     font-weight: 400;
@@ -61,8 +65,7 @@ h1{
 }
 
 .societe{
-    grid-row: 2/3;
-    grid-column: 1/9;
+    grid-area: societe;
     align-content: center;
     
     font-size: 1.2em;
@@ -71,8 +74,7 @@ h1{
 }
 
 .periode{
-    grid-row: 2/3;
-    grid-column: 14/19;
+    grid-area: periode;
     align-content: center;
     
     font-weight: 400;
@@ -80,8 +82,7 @@ h1{
 }
 
 .description_experience{
-    grid-row: 3/4;
-    grid-column: 2/19;
+    grid-area: description_experience;
     text-align: justify;
     align-content: center;
     
