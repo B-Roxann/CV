@@ -31,34 +31,39 @@ btn_telecharger.addEventListener("click", ()=>
 /******************************************************************/
 /***********************Script du Formulaire***********************/
 /******************************************************************/
+(() =>{
+    let form = document.getElementById("form_contact");
+    let error_tags = document.querySelectorAll("small.form_error");
 
-let form = document.getElementById("form_contact");
-let error_tags = document.querySelectorAll("small.form_error");
+    const nom_input =  document.getElementById("nom");
+    const email_input = document.getElementById("email");
+    const liste_input = [nom_input, email_input];
 
-if(form){
-    /**Ecouteur d'évènement au submit**/
-    /**Effectue les tests RegEx des champs obligatoires**/
-    form.addEventListener("submit",(event)=>{
-            event.preventDefault();
-            try{
+    if(form){
+        /**Ecouteur d'évènement au submit**/
+        /**Effectue les tests RegEx des champs obligatoires**/
+        form.addEventListener("submit",(event)=>{
+                event.preventDefault();
+                try{
 
-                retirer_erreur(error_tags);
+                    retirer_erreur(error_tags);
 
-                //Vérification que les champs sont valides
-                liste_input.forEach(element => {
-                    tester_champ(element);
-                });
-                
-                //Validation du formulaire
-                valider_formulaire(error_tags);
-                
-                //Génération du mail par le service Email.js
-                envoyer_email();
+                    //Vérification que les champs sont valides
+                    liste_input.forEach(element => {
+                        tester_champ(element);
+                    });
+                    
+                    //Validation du formulaire
+                    valider_formulaire(error_tags);
+                    
+                    //Génération du mail par le service Email.js
+                    envoyer_email();
 
-                //Affichage de la popup qui confirme l'envoi
-                afficher_popup_message_envoye();
-            }catch(error){
-                console.log("Nombre d'erreur(s) survenu(es) :" + error.message);
-            }
-    });
-}
+                    //Affichage de la popup qui confirme l'envoi
+                    afficher_popup_message_envoye();
+                }catch(error){
+                    console.log("Nombre d'erreur(s) survenu(es) :" + error.message);
+                }
+        });
+    }
+})();

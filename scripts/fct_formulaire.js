@@ -2,11 +2,6 @@
 /*********************fonctionnement du formulaire*********************/
 
 
-const nom_input =  document.getElementById("nom");
-const email_input = document.getElementById("email");
-
-const liste_input = [nom_input, email_input];
-
 /**
  * Cette fonction va nettoyer le champ,
  * 
