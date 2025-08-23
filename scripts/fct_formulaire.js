@@ -39,7 +39,7 @@ function tester_champ(champ){
  * @param {Input} champ 
  */
 function regex_email(champ){
-    let regex_for_email = new RegExp("^[a-z0-9._-]+@[a-z0-9._-]+\\.[a-z0-9._-]+$");
+    let regex_for_email = new RegExp("^[a-z0-9._-]+@[a-z0-9._-]+\\.[a-z0-9._-]+$","i");
     let champ_value = nettoyer_champ(champ)
     let test_email = regex_for_email.test(champ_value);
     const small = champ.parentElement.querySelector(".form_error");
