@@ -9,10 +9,8 @@
 
 /************************Elements génériques************************/
 body{
-    --color-1 : #00ffff;
-    --color-2 : #ccffff;
-    --color-3 : #80d94c;
-    --color-4 : #33CC33;
+    --color-1 : #80d94c;
+    --color-2 : #33CC33;
 }
 
 /************************Elements principaux************************/
@@ -127,7 +125,7 @@ a{
 }
 
 .lien_bouton:hover{
-    background: linear-gradient(90deg,var(--color-3), var(--color-4));
+    background: linear-gradient(90deg,var(--color-1), var(--color-2));
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
     border: 2px solid black;
     color: black;
@@ -155,7 +153,7 @@ a{
 
 /***********Suivi de navigation***********/
 .changement_page{
-    box-shadow: 0px 5px var(--color-3);
+    box-shadow: 0px 5px var(--color-1);
 }
 
 /***********En travaux***********/

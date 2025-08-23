@@ -1,6 +1,6 @@
 /***********Suivi de navigation***********/
 #home{
-    box-shadow: 0px 5px var(--color-3);
+    box-shadow: 0px 5px var(--color-1);
 }
 
 
@@ -58,7 +58,7 @@ h1{
 }
 
 .bouton:hover{
-    background: linear-gradient(160deg,var(--color-3) ,var(--color-4));
+    background: linear-gradient(160deg,var(--color-1) ,var(--color-2));
     border: 1px rgb(0, 0, 0) solid;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.70);
     
