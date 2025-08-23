@@ -105,10 +105,32 @@ a{
     color: black;
 }
 
-a:hover{
+.lien_nav:hover{
     text-decoration: underline;
     color: rgb(114, 114, 114);
     size: bold;
+}
+.lien_bouton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid white;
+    border-radius: 4px;
+    height: 40px;
+    width: 200px !important;
+    
+    margin-top: 15px;
+
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.lien_bouton:hover{
+    background: linear-gradient(90deg,var(--color-3), var(--color-4));
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+    border: 2px solid black;
+    color: black;
 }
 
 .afficher_barre_nav{

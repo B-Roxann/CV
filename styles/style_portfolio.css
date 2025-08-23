@@ -42,25 +42,6 @@
     width: 100%;
 }
 
-.git{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.lien_bouton{
     border: 2px solid black;
-    border-radius: 4px;
-    height: 40px;
-    width: 200px;
-    
-    margin-top: 15px;
-
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: underline;
-    
-}
-
-.git:hover{
-    background: linear-gradient(90deg,var(--color-3), var(--color-4));
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
 }
