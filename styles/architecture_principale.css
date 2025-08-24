@@ -134,6 +134,9 @@ a{
 .afficher_barre_nav{
     transform: translateY(100%);
 }
+.ajuster_barre_nav{
+    width: 250px !important;
+}
 .afficher_liste{
     display: block !important;
 }

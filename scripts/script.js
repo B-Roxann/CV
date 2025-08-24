@@ -2,16 +2,16 @@
 /************Script du bandeau de navigation secondaire************/
 /******************************************************************/
 
-let navigation_secondaire = document.getElementById("nav_secondaire")
+const navigation_secondaire = document.getElementById("nav_secondaire")
 
 
-let btn_experiences = document.getElementById("experiences");
-let btn_competences = document.getElementById("competences");
-let btn_telecharger = document.getElementById("telecharger");
+const btn_experiences = document.getElementById("experiences");
+const btn_competences = document.getElementById("competences");
+const btn_telecharger = document.getElementById("telecharger");
 
-let liste_experiences = document.getElementById("liste_exp");
-let liste_competences = document.getElementById("liste_comp");
-let liste_telecharger = document.getElementById("liste_telecharger");
+const liste_experiences = document.getElementById("liste_exp");
+const liste_competences = document.getElementById("liste_comp");
+const liste_telecharger = document.getElementById("liste_telecharger");
 
 
 /**Permet le développement du bandeau de navigation**/
@@ -24,7 +24,7 @@ btn_competences.addEventListener("click", ()=>
 );
 
 btn_telecharger.addEventListener("click", ()=>
-    developper_menu(btn_telecharger, liste_telecharger)
+    developper_menu(btn_telecharger, liste_telecharger, "ajuster_barre_nav")
 );
 
 
