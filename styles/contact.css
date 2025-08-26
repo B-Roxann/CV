@@ -119,7 +119,7 @@ input:focus, textarea:focus{
 
 /***********Elements principaux***********/
 .fenetre_popup{
-    display: flex;
+    display: none;
     align-items: center;
     
     position: fixed;

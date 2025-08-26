@@ -2,10 +2,6 @@
 /**********fonctionnement du bandeau de navigation secondaire**********/
 
 
-function verifier_menu(){
-
-}
-
 /**
  * Cette fontion permet d'aligner une liste
  * a son élément "Expériences", "Compétences" ...

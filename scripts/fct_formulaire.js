@@ -146,9 +146,9 @@ const mail_envoye = document.getElementById("btn_retour");
 const fenetre_popup = document.getElementById("popup");
 
 mail_envoye.addEventListener("click", ()=>{
-    fenetre_popup.classList.add("hidden");
+    fenetre_popup.style.display = "none";
 });
 
 function afficher_popup_message_envoye(){
-    fenetre_popup.classList.remove("hidden");
+    fenetre_popup.style.display = "flex";
 }
