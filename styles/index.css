@@ -14,11 +14,10 @@
 /***********Présentation***********/
 .presentation_box{
     display: flex;
-    padding-left: 30px;
     
     position: fixed;
-    top: 25vh;
-    
+    top: 25%;
+    left: 30px;
 }
 
 .presentation_box *{
