@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
+    <!--                        Intégration des fonctions media queries      -->
+    <script src="../scripts/media_queries.js" defer></script>
     <!--                        Intégration des fonctions                    -->
     <script src="../scripts/fct_nav_secondaire.js" defer></script>
     <!--                        Intégration du script                        -->
@@ -23,11 +25,9 @@
 </head>
 
 <body>
-    <nav class="barre_navigation" aria-label="Navigation principale">
-        <div class="navigation">
-            <a href="Index.html">
-                <img class="logo" src="../Images/Logos/BREMOND_logo.svg" alt="Home" title="Logo Home">
-            </a>
+    <nav class="barre_navigation" id="nav_principale" aria-label="Navigation principale">
+        <div class="navigation block">
+            <img id="logo_principal" src="../Images/Logos/BREMOND_logo.svg" alt="Home" title="Logo Home">
         </div>
         <div class="navigation">
             <a class="lien_nav" href="Index.html">Home</a>
