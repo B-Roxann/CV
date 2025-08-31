@@ -11,20 +11,10 @@ const menu_principal = document.querySelectorAll(".navigation");
 navigation_principale.addEventListener("click", ()=>{
     const navigation_secondaire = document.getElementById("nav_secondaire");
     if (largeur_window <= 768){
-
-        if(navigation_secondaire.classList.contains("afficher_barre_nav")){
+        menu_principal.forEach(element =>{
             //On ferme également la barre secondaire si elle est ouverte
-            cacher_barre();
-            setTimeout(() => {
-                menu_principal.forEach(element =>{
-                    element.classList.toggle("active");
-                });
-            }, 650);
-        }else{
-            menu_principal.forEach(element =>{
-                element.classList.toggle("active");
-            });
-
-        }
+            navigation_secondaire.classList.remove("afficher_barre_nav");
+            element.classList.toggle("active");
+        });
     };
 })

@@ -8,7 +8,12 @@
  * On range la barre de navigation et ses menus
  */
 window.addEventListener("resize", ()=>{
-    cacher_barre();
+    toggle_classe(navigation_secondaire, "afficher_barre_nav");  //On affiche la nav
+    alignerY_menu(navigation_secondaire, "cacher"); //On cache la barre_de_nav
+            setTimeout(() => {  //On attend 600ms pour que le menu se ferme
+                cacher_les_menus();  //On cache les menus
+                retirer_classe(navigation_secondaire, "ajuster_barre_nav");  //On redimensionne taille standard
+            }, 600);
 })
 
 
