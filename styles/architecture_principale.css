@@ -63,11 +63,12 @@ body{
 main{
     display: flex;
     justify-content: center;
+    overflow: hidden;
 
     height: 100%;
     width: 100%;
 
-    padding-top: 70px;
+    margin-top: 70px;
 }
 
 footer{
@@ -188,12 +189,36 @@ a{
 
 /*Media pour mobile*/
 @media (max-width: 480px){
+    
+    /********Eléments principaux*******/
     .barre_navigation{
         flex-direction: column;
         align-items: center;
         gap: 15px;
+
         height: auto;
     }
+    .secondaire{
+        height: 80px;
+    }
+    aside{
+        flex-direction: row;
+        
+        top: 109px;
+        
+        background-color: rgba(255, 255, 255, 1);
+        height: 60px;
+        width: 100%;
+
+        padding: 0px;
+        gap: 10px;
+    }
+    main{
+        margin-top: 98px;
+    }
+
+    /********Par zone*******/
+    /********Navigation*******/
     .logo{
         height: 30px;
     }
@@ -203,18 +228,83 @@ a{
     .navigation.active{
         display: block;
     }
+    
+    /********Aside*******/
+    aside h2,
+    aside .separateur{
+        display: none;
+    }
+
+    .aside_container{
+        display: flex;
+        flex-direction: row;
+    }
+    .logo_aside{
+        display: flex;
+        align-items: center;
+    }
+    .logo_aside img{
+        height: 30px;
+    }
+    .notation{
+        display: flex;
+        flex-wrap: wrap;
+        width: 20px;
+    }
+    .notation img{
+        height: 10px;
+    }
+
+    /********Main*******/
+    .main_container{
+        width: 100%;
+
+        padding: 80px 20px 20px 20px;
+    }
+    h1{
+        text-align: center;
+    }
     .presentation_box{
         flex-direction: column;
         padding-top: 70px;
-        position: static !important;
+        position: static;
     }
     .portrait_box{
-        height: 250px !important;
+        height: 250px;
     }
-    .secondaire{
-        height: 80px;
+    .experience_professionnelle{
+        font-size: 0.9em;
     }
-}
+    .societe{
+        font-size: 1em;
+    }
+    .pays{
+        font-size: 0.9em;
+    }
+    .profession{
+        font-size: 1.1em;
+        align-content: baseline;
+    }
+    .periode{
+        font-size: 0.8em;
+    }
+    .description_experience ul{
+        padding-left: 0px;
+    }
+    .section{
+        padding: 10px;
+    }
+    /********Formulaire*******/
+    form{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "form_nom"
+            "form_societe"
+            "form_email"
+            "form_message"
+            "submit_message";
+    }
+
 /*Media pour tablette*/
 @media (max-width: 1024px){
     
