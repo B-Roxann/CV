@@ -174,14 +174,6 @@ a{
     display: block !important;
 }
 
-/***********En travaux***********/
-.en_travaux{
-    background-image: url("../Images/under_construction.jpg");
-    opacity: 0.6;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
 /*****************************************************/
 /********************Media Queries********************/
