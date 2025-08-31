@@ -93,7 +93,7 @@ footer{
 
 /*******Navigation et Footer*******/
 .navigation{
-    width: 100px;
+    width: auto;
     align-content: center;
     text-align: center;
 }
@@ -187,7 +187,71 @@ a{
 /********************Media Queries********************/
 /*****************************************************/
 
-/*Media pour mobile*/
+/****************************************/
+/*****************Laptop*****************/
+/****************************************/
+@media (max-width: 1280px){
+    aside{
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+
+/******************************************/
+/*****************Tablette*****************/
+/******************************************/
+@media (max-width: 1024px){
+    /********Eléments principaux*******/
+    aside{
+        flex-direction: row;
+        justify-content: space-around;
+        
+        top: 70px;
+
+        background-color: rgba(255, 255, 255, 1);
+
+        height: 50px;
+        width: 100%;
+        
+        padding: 10px 0px;
+
+        font-size: 0.9em;
+    }
+
+    /********Par zone*******/
+    /********Aside*******/
+    .aside_container{
+        display: flex;
+        flex-direction: row;
+    }
+    aside .separateur,
+    aside h1{
+        display: none;
+    }
+    .aside_container section{
+        padding: 0px 20px;
+    }
+    .notation{
+        display: flex;
+        flex-wrap: wrap;
+        
+        width: 40px;
+    }
+    .notation img{
+        height: 15px;
+    }
+
+    /********Main*******/
+    .main_container{
+        padding: 90px 80px;
+    }
+}
+
+
+/****************************************/
+/*****************Mobile*****************/
+/****************************************/
 @media (max-width: 480px){
     
     /********Eléments principaux*******/
@@ -304,12 +368,4 @@ a{
             "form_message"
             "submit_message";
     }
-}
-/*Media pour tablette*/
-@media (max-width: 1024px){
-    
-}
-/*Media pour laptop*/
-@media (max-width: 1280px){
-    
 }
